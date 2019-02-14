@@ -1,5 +1,8 @@
 import React, {Component} from "react";
 import axios from "axios";
+import Container from 'react-bulma-components/lib/components/container';
+import Heading from 'react-bulma-components/lib/components/heading';
+import Section from 'react-bulma-components/lib/components/section';
 
 class Testimonials extends Component {
     constructor(props) {
@@ -29,10 +32,10 @@ class Testimonials extends Component {
     renderItems = () => {
         return this.state.testimonialList.map(item => (
             <li>
-            <span className={"list-group-item d-flex justify-content-between align-items-center"}>
+            <span>
                 {item.customer}
             </span>
-            <span className={"todo-title"}>
+            <span>
                 {item.experience}
             </span>
             </li>
@@ -42,18 +45,11 @@ class Testimonials extends Component {
 
     render() {
         return (
-            <main className="content">
-                <h1 className="text-white text-uppercase text-center my-4">Todo app</h1>
-                <div className="row ">
-                    <div className="col-md-6 col-sm-10 mx-auto p-0">
-                        <div className="card p-3">
-                            <ul className="list-group list-group-flush">
+            <Section>
+                <Container fluid>
                                 {this.renderItems()}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </main>
+                </Container>
+            </Section>
         );
     }
 }
