@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import axios from "axios";
-import Container from 'react-bulma-components/lib/components/container';
 import Heading from 'react-bulma-components/lib/components/heading';
 import Section from 'react-bulma-components/lib/components/section';
 
@@ -46,9 +45,7 @@ class Testimonials extends Component {
     render() {
         return (
             <Section>
-                <Container fluid>
                                 {this.renderItems()}
-                </Container>
             </Section>
         );
     }
