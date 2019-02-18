@@ -53,7 +53,7 @@ class Testimonials extends Component {
 
     render() {
         return (
-            <Section>
+            <Section className="is-large">
                                 {this.renderItems()}
             </Section>
         );

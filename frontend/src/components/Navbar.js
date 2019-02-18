@@ -1,16 +1,42 @@
 import React, {Component} from "react";
-import navbar from 'react-bulma-components/lib/components/navbar';
+import '../_variables.sass'
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+import Navbar from 'react-bulma-components/lib/components/navbar';
+import Container from 'react-bulma-components/lib/components/container'
+import logo from "../logo.png";
 
-class Navbar extends Component {
+class TopNavbar extends Component {
     render() {
-        return(
-            <navbar
-                fixed={"top"}
+        return (
+            <Navbar
+                fixed="top"
+                transparent="transparent"
             >
-                <p>this is my navigation</p>
-            </navbar>
+                <Container fluid>
+                <Navbar.Brand
+                >
+                    <Navbar.Item renderAs="a" href="#">
+                        <img
+                            src={logo}
+                            alt="Bunny's Buns"
+                            width="144"
+                        />
+                    </Navbar.Item>
+                    <Navbar.Burger
+                    />
+                </Navbar.Brand>
+                <Navbar.Menu>
+                    <Navbar.Container>
+                        <Navbar.Item href="#" className="is-size-2">Bunny's Buns</Navbar.Item>
+                    </Navbar.Container>
+                    <Navbar.Container position="end">
+                        <Navbar.Item href="#">At the end</Navbar.Item>
+                    </Navbar.Container>
+                </Navbar.Menu>
+                </Container>
+            </Navbar>
         );
     }
 }
 
-export default Navbar;
+export default TopNavbar;

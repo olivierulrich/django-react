@@ -1,25 +1,29 @@
 import React, {Component} from "react";
 import Testimonials from "./components/Testimonials";
 import Container from 'react-bulma-components/lib/components/container';
-import Navbar from "./components/Navbar";
+import TopNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Images from "./components/Images";
 
 class App extends Component {
 
     render() {
         return (
-<div>
+            <div>
 
-            <Navbar/>
+                <TopNavbar/>
 
-            <Container fluid>
+                <Images/>
 
-            <Testimonials/>
+                <Container fluid>
 
-            </Container>
 
-            <Footer/>
-</div>
+                    <Testimonials/>
+
+                </Container>
+
+                <Footer/>
+            </div>
 
         )
     }

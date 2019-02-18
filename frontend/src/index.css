@@ -4,7 +4,13 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+    color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #b6b5bf;
+    background-color: #525862;
 }
+
+/*
+used to give a Bulma Hero object a background image, because Bulma doesn't support this natively. A bit hacky.
+ */
+.has-bg-img { background: url('buns.jpg')center center; background-size:cover; }
