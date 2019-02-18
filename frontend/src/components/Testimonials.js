@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import axios from "axios";
 import Section from 'react-bulma-components/lib/components/section';
+import Tile from 'react-bulma-components/lib/components/tile';
+import Heading from 'react-bulma-components/lib/components/heading';
 
 class Testimonials extends Component {
 
@@ -39,22 +41,27 @@ class Testimonials extends Component {
      */
     renderItems = () => {
         return this.state.testimonialList.map(item => (
-            <li>
-            <span>
-                {item.customer}
-            </span>
-            <span>
-                {item.experience}
-            </span>
-            </li>
+
+            <Tile kind="parent" vertical>
+              <Tile renderAs="article" kind="child" notification color="primary">
+                <Heading>{item.customer}</Heading>
+                <Heading subtitle>{item.experience}</Heading>
+              </Tile>
+            </Tile>
         ));
 
     };
 
     render() {
         return (
-            <Section className="is-large">
-                                {this.renderItems()}
+            <Section className="is-medium">
+                <Tile kind="ancestor">
+                    <Tile size={12}>
+                        <Tile>
+                            {this.renderItems()}
+                        </Tile>
+                    </Tile>
+                </Tile>
             </Section>
         );
     }
