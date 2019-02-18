@@ -10,7 +10,10 @@
     "react": "^16.8.1",
     "react-bulma-components": "^2.3.0",
     "react-dom": "^16.8.1",
+    "react-loader-spinner": "^2.3.0",
+    "react-loading-spinner": "^1.0.12",
     "react-scripts": "2.1.5",
+    "react-spinners": "^0.5.1",
     "reactstrap": "^7.1.0"
   },
   "scripts": {

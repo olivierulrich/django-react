@@ -14,3 +14,10 @@ body {
 used to give a Bulma Hero object a background image, because Bulma doesn't support this natively. A bit hacky.
  */
 .has-bg-img { background: url('buns.jpg')center center; background-size:cover; }
+
+/*
+hacky way to change the burger control colors on the mobile menu.
+ */
+.navbar-burger span {
+    background-color: #0f0f0f !important;
+}
